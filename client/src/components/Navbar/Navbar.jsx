@@ -1,101 +1,99 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  KeyboardArrowDown,
-  Search,
-  PersonOutline,
+  ArrowDropDown,
   FavoriteBorderOutlined,
   ShoppingCartOutlined,
+  PersonOutline,
+  MenuOutlined,
 } from "@mui/icons-material";
 import "./navbar.scss";
 
-const Navbar = () => {
+function Navbar() {
   return (
     <div className="navbar">
-      <div className="nav-wrapper">
-        {/* top navbar starts here */}
-        <div className="top-nav">
-          <div className="topnav-left">
-            <img src="/img/logo.png" alt="Grossdot" className="logo" />
+      <div className="navbar-wrapper">
+        <div className="navbar-top">
+          <div className="navbar-top-left">
+            <img src="/img/logo.png" alt="" className="logo" />
           </div>
-
-          <div className="topnav-center">
+          <div className="navbar-top-center">
+            <span className="navbar-top-center-drop">
+              All
+              <ArrowDropDown />
+            </span>
             <form method="GET" action="">
-              <div className="form-wrapper">
-                <span to="/" className="searchLink">
-                  <Search />
-                </span>
-                <input
-                  type="text"
-                  id="search"
-                  className="search"
-                  placeholder="Search your products, brand, categories..."
-                />
-              </div>
+              <input
+                type="text"
+                id="nav-search"
+                placeholder="apple watch brand..."
+                className="nav-search"
+              />
               <input
                 type="submit"
-                value="search"
-                id="search-btn"
-                className="search-btn"
+                value="Search"
+                id="nav-search-submit"
+                className="nav-search-submit"
               />
             </form>
           </div>
-
-          <div className="topnav-right">
-            <span className="lang">
-              <img src="/img/en.png" alt="en" className="en" />
-              <KeyboardArrowDown className="topnav-right-icons" />
+          <div className="navbar-top-right">
+            <span className="navbar-top-right-item">
+              <FavoriteBorderOutlined />
+              Wish List
             </span>
-
-            <span className="topnav-right-favorite">
-              <FavoriteBorderOutlined className="topnav-right-icons" />
-              <span>0</span>
+            <span className="navbar-top-right-item">
+              <ShoppingCartOutlined />
+              Cart
+              <span className="nav-cart-count">0</span>
             </span>
-
-            <span className="topnav-right-cart">
-              <ShoppingCartOutlined className="topnav-right-icons" />
-              <span>0</span>
-            </span>
-
-            <span className="topnav-right-account">
-              <PersonOutline className="topnav-right-icons" />
-              <span>Account</span>
+            <span className="navbar-top-right-item">
+              <PersonOutline />
+              Account
             </span>
           </div>
         </div>
-        {/* top navbar ends here */}
 
-        {/* bottom navbar starts here */}
-        <div className="bottom-nav">
-          <Link to="/products/1" className="bottom-nav-link">
-            All Products
-          </Link>
-          <Link to="/products/2" className="bottom-nav-link">
-            Accessories
-          </Link>
-          <Link to="/products/3" className="bottom-nav-link">
-            Babies
-          </Link>
-          <Link to="/products/4" className="bottom-nav-link">
-            Cosmetics
-          </Link>
-          <Link to="/products/5" className="bottom-nav-link">
-            Men
-          </Link>
-          <Link to="/products/6" className="bottom-nav-link">
-            Woman
-          </Link>
-          <Link to="/products/7" className="bottom-nav-link">
-            Corporates
-          </Link>
-          <Link to="/products/8" className="bottom-nav-link">
-            Casuals
-          </Link>
+        <div className="navbar-bottom">
+          <div className="navbar-bottom-left">
+            <MenuOutlined />
+            <span className="navbar-bottom-link-group">
+              <Link to="/" className="navbar-bottom-left-item">
+                All Category
+              </Link>
+              <Link to="/" className="navbar-bottom-left-item">
+                Today's Deals
+              </Link>
+              <Link to="/" className="navbar-bottom-left-item">
+                Hot Offers
+              </Link>
+              <Link to="/" className="navbar-bottom-left-item">
+                Gift Cards
+              </Link>
+              <Link to="/" className="navbar-bottom-left-item">
+                Menu Items
+              </Link>
+              <Link to="/" className="navbar-bottom-left-item">
+                Help
+              </Link>
+            </span>
+          </div>
+
+          <div className="navbar-bottom-right">
+            <span className="navbar-bottom-right-item">
+              EN
+              <ArrowDropDown />
+            </span>
+            <span className="navbar-bottom-right-item">
+              Ship to
+              <img src="/img/nig.png" alt="" className="nig" />
+              <ArrowDropDown />
+            </span>
+          </div>
         </div>
-        {/* bottom navbar ends here */}
       </div>
     </div>
   );
-};
+}
 
 export default Navbar;
