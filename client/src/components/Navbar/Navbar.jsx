@@ -15,7 +15,9 @@ function Navbar() {
       <div className="navbar-wrapper">
         <div className="navbar-top">
           <div className="navbar-top-left">
-            <img src="/img/logo.png" alt="" className="logo" />
+            <Link to="/">
+              <img src="/img/logo.png" alt="" className="logo" />
+            </Link>
           </div>
           <div className="navbar-top-center">
             <span className="navbar-top-center-drop">
@@ -58,7 +60,7 @@ function Navbar() {
           <div className="navbar-bottom-left">
             <MenuOutlined />
             <span className="navbar-bottom-link-group">
-              <Link to="/" className="navbar-bottom-left-item">
+              <Link to="/products/1" className="navbar-bottom-left-item">
                 All Category
               </Link>
               <Link to="/" className="navbar-bottom-left-item">
