@@ -1,13 +1,10 @@
 import React from "react";
-import Slider from "../../components/Slider/Slider";
-import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts.jsx";
+import Banner from "../../components/Banner/Banner";
 
 function Home() {
   return (
     <div className="home">
-      Home
-      {/* <Slider /> */}
-      {/* <FeaturedProducts /> */}
+      <Banner />
     </div>
   );
 }
