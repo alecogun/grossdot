@@ -74,12 +74,6 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <div className="copyright">
-          <div className="footer-border"></div>
-          <span>
-            Copyright &copy;2023 Grossdot E-commerce. All Rights Reserved
-          </span>
-        </div>
         <div className="footer-social">
           <Link to="https://twitter.com/grossdots" className="social-link">
             <Twitter className="footer-icon" />
@@ -90,6 +84,21 @@ function Footer() {
           <Link to="https://tiktok.com/grossdot" className="social-link">
             <img src="/img/tik.png" alt="" className="footer-icon" />
           </Link>
+        </div>
+
+        <div className="copyright">
+          <div className="footer-border"></div>
+          <span>
+            Copyright &copy;2023 Grossdot E-commerce. All Rights Reserved
+          </span>
+        </div>
+
+        <div className="footer-payment">
+          <img
+            src="/img/payment.png"
+            alt="Payments We Accept"
+            className="footer-payment-img"
+          />
         </div>
       </div>
     </div>
